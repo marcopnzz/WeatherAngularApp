@@ -1,0 +1,33 @@
+<div class="weather-container" *ngIf="data != null">
+  <div class="shadow">
+    <img
+      src="http://openweathermap.org/img/wn/{{ data.getImgId() }}@4x.png"
+      alt=""
+    />
+    <div class="info-container">
+      <div style="text-transform: capitalize">
+        {{ data.getDescription() }}
+      </div>
+      <div class="temp-cont">
+        <p style="font-weight: bold; font-size: 60px">
+          {{ data.getTemps()[0] }}
+        </p>
+        <div class="square">
+          <div class="row">
+            <p style="font-size: 30px; color: grey">°C</p>
+            <p></p>
+          </div>
+          <div class="row">
+            <p></p>
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <img
+      src="https://www.countryflags.io/{{ data.getCountry() }}/flat/64.png"
+    />
+  </div>
+  <iframe class="map" [src]="data.getUrl()"></iframe>
+</div>

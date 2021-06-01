@@ -1,0 +1,34 @@
+button {
+  background-color: cornflowerblue;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+button:hover {
+  background-color: rgb(59, 117, 226);
+}
+input {
+  padding: 10px;
+  border-radius: 5px;
+  height: 35px;
+}
+input::placeholder {
+  text-align: center;
+}
+input:focus {
+  outline: none;
+}
+button:hover,
+input:hover {
+  box-shadow: 0 2px 12px rgb(32 33 36 / 28%);
+}
+.city-form {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.city-form > * {
+  margin: 10px;
+}
